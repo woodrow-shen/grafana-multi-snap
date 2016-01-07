@@ -1,6 +1,6 @@
 architectures: [amd64, armhf]
 icon: meta/icon.png
-name: demo-grafana
+name: grafana
 services:
 - description: grafana service
   name: grafana
