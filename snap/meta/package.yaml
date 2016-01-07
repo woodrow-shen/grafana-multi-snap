@@ -1,0 +1,17 @@
+architectures: [amd64, armhf]
+icon: meta/icon.png
+name: demo-grafana
+services:
+- description: grafana service
+  name: grafana
+  ports:
+    external:
+      ui:
+        negotiable: false
+        port: 3000/tcp
+  security-override:
+    apparmor: meta/grafana.apparmor
+    seccomp: meta/grafana.seccomp
+  start: magic-bin/start-service.sh
+vendor: Woodrow Shen <woodrow.shen@canonical.com>
+version: 2.6.0-1
